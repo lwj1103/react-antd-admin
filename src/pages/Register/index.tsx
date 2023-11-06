@@ -3,7 +3,7 @@ import type { FC } from 'react';
 
 import './index.less';
 
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Button, Form, Input } from 'antd';
 import { useDispatch } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 
@@ -12,7 +12,7 @@ import { formatSearch } from '@/utils/formatSearch';
 
 import { RegisterAsync } from '../../stores/user.action';
 
-import BackgroundImage from './RE4wppI.jpg'
+// import BackgroundImage from './RE4wppI.jpg'
 
 const initialValues: RegisterParams = {
   username: 'guest',

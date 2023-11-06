@@ -9,10 +9,9 @@ import TestPage from '@/pages/components/test';
 import Dashboard from '@/pages/dashboard';
 import LayoutPage from '@/pages/layout';
 import LoginPage from '@/pages/login';
-import RegisterPage from '@/pages/Register'
+import RegisterPage from '@/pages/Register';
 
 import WrapperRouteComponent from './config';
-import RegisterForm from '@/pages/Register';
 
 const NotFound = lazy(() => import(/* webpackChunkName: "404'"*/ '@/pages/404'));
 const Documentation = lazy(() => import(/* webpackChunkName: "404'"*/ '@/pages/doucumentation'));
