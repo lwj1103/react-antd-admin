@@ -1,4 +1,3 @@
-import type { RegisterParams } from '../interface/user/register';
 import type { LoginParams } from '../interface/user/login';
 import type { Dispatch } from '@reduxjs/toolkit';
 
@@ -27,26 +26,6 @@ export const loginAsync = createAsyncAction<LoginParams, boolean>(payload => {
   };
 });
 
-export const RegisterAsync = createAsyncAction<RegisterParams, boolean>(payload => {
-  return async dispatch => {
-    const { result, status } = await apiLogin(payload);
-
-    if (status) {
-      localStorage.setItem('t', result.token);
-      localStorage.setItem('username', result.username);
-      dispatch(
-        setUserItem({
-          logged: true,
-          username: result.username,
-        }),
-      );
-
-      return true;
-    }
-
-    return false;
-  };
-});
 export const logoutAsync = () => {
   return async (dispatch: Dispatch) => {
     const { status } = await apiLogout({ token: localStorage.getItem('t')! });

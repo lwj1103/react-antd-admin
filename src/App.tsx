@@ -15,7 +15,6 @@ import RenderRouter from './routes';
 import { setGlobalState } from './stores/global.store';
 
 const App: React.FC = () => {
-  debugger;
   const { locale } = useSelector(state => state.user);
   const { theme, loading } = useSelector(state => state.global);
   const dispatch = useDispatch();
