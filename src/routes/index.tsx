@@ -5,11 +5,9 @@ import { lazy } from 'react';
 import { Navigate } from 'react-router';
 import { useRoutes } from 'react-router-dom';
 
-import TestPage from '@/pages/components/test';
 import Dashboard from '@/pages/dashboard';
 import LayoutPage from '@/pages/layout';
 import LoginPage from '@/pages/login';
-import RegisterPage from '@/pages/Register';
 
 import WrapperRouteComponent from './config';
 
@@ -35,10 +33,6 @@ const routeList: RouteObject[] = [
   {
     path: '/login',
     element: <WrapperRouteComponent element={<LoginPage />} titleId="title.login" />,
-  },
-  {
-    path: '/register',
-    element: <WrapperRouteComponent element={<RegisterPage />} titleId="title.login" />,
   },
   {
     path: '/',
@@ -111,10 +105,6 @@ const routeList: RouteObject[] = [
       {
         path: '*',
         element: <WrapperRouteComponent element={<NotFound />} titleId="title.notFount" />,
-      },
-      {
-        path: 'component/testpage',
-        element: <WrapperRouteComponent element={<TestPage />} titleId="title.account" />,
       },
     ],
   },

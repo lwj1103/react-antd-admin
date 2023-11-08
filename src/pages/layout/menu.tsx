@@ -47,6 +47,7 @@ const MenuComponent: FC<MenuProps> = props => {
     onChangeOpenKey(key);
   };
 
+
   return (
     <Menu
       mode="inline"

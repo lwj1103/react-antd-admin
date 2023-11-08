@@ -12,8 +12,6 @@ import { formatSearch } from '@/utils/formatSearch';
 
 import { loginAsync } from '../../stores/user.action';
 
-import BackgroundImage from './RE4wppI.jpg'
-
 const initialValues: LoginParams = {
   username: 'guest',
   password: 'guest',
@@ -38,10 +36,9 @@ const LoginForm: FC = () => {
   };
 
   return (
-    // style={{backgroundImage :`url(${BackgroundImage})`,  backgroundSize : 'cover'}}
     <div className="login-page">
       <Form<LoginParams> onFinish={onFinished} className="login-page-form" initialValues={initialValues}>
-        <h2>CONTRACT MANAGE</h2>
+        <h2>REACT ANTD ADMIN</h2>
         <Form.Item
           name="username"
           rules={[

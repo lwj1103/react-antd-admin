@@ -5,6 +5,7 @@ import { ReactComponent as DashboardSvg } from '@/assets/menu/dashboard.svg';
 import { ReactComponent as DocumentationSvg } from '@/assets/menu/documentation.svg';
 import { ReactComponent as GuideSvg } from '@/assets/menu/guide.svg';
 import { ReactComponent as PermissionSvg } from '@/assets/menu/permission.svg';
+import { UserOutlined , FileTextOutlined, BankOutlined,FileWordOutlined} from '@ant-design/icons';
 
 interface CustomIconProps {
   type: string;
@@ -24,6 +25,14 @@ export const CustomIcon: FC<CustomIconProps> = props => {
     com = <AccountSvg />;
   } else if (type === 'documentation') {
     com = <DocumentationSvg />;
+  } else if (type === 'user') {
+    com = <UserOutlined />;
+  } else if (type === 'contract') {
+    com = <FileTextOutlined />;
+  } else if (type === 'Institutional') {
+    com = <BankOutlined />;
+  } else if (type === 'contractfile') {
+    com = <FileWordOutlined />;
   } else {
     com = <GuideSvg />;
   }
